@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shopping_nav"
+    app:startDestination="@id/shoppingAnasayfaFragment">
+
+    <fragment
+        android:id="@+id/shoppingAnasayfaFragment"
+        android:name="com.serkanyilmaz.finaldemo.ui.fragment.ShoppingAnasayfaFragment"
+        android:label="fragment_shopping_anasayfa"
+        tools:layout="@layout/fragment_shopping_anasayfa" >
+        <action
+            android:id="@+id/shoppingEkleGecis"
+            app:destination="@id/shoppingEkleFragment" />
+        <action
+            android:id="@+id/shoppingDetayGecis"
+            app:destination="@id/shoppingDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingDetayFragment"
+        android:name="com.serkanyilmaz.finaldemo.ui.fragment.ShoppingDetayFragment"
+        android:label="fragment_shopping_detay"
+        tools:layout="@layout/fragment_shopping_detay" >
+        <argument
+            android:name="urun"
+            app:argType="com.serkanyilmaz.finaldemo.data.entity.Urunler" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingEkleFragment"
+        android:name="com.serkanyilmaz.finaldemo.ui.fragment.ShoppingEkleFragment"
+        android:label="fragment_shopping_ekle"
+        tools:layout="@layout/fragment_shopping_ekle" >
+        <argument
+            android:name="urun"
+            app:argType="com.serkanyilmaz.finaldemo.data.entity.Urunler" />
+    </fragment>
+</navigation>
