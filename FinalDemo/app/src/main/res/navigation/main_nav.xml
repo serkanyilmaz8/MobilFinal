@@ -23,12 +23,19 @@
         android:id="@+id/placesAnasayfaFragment"
         android:name="com.serkanyilmaz.finaldemo.ui.fragment.PlacesAnasayfaFragment"
         android:label="fragment_places_anasayfa"
-        tools:layout="@layout/fragment_places_anasayfa" />
+        tools:layout="@layout/fragment_places_anasayfa" >
+        <action
+            android:id="@+id/action_placesAnasayfaFragment_to_placesDetayFragment"
+            app:destination="@id/placesDetayGecis" />
+    </fragment>
     <fragment
         android:id="@+id/shoppingAnasayfaFragment2"
         android:name="com.serkanyilmaz.finaldemo.ui.fragment.ShoppingAnasayfaFragment"
         android:label="fragment_shopping_anasayfa"
         tools:layout="@layout/fragment_shopping_anasayfa" >
+        <argument
+            android:name="Urun"
+            app:argType="com.serkanyilmaz.finaldemo.data.entity.Urunler" />
         <action
             android:id="@+id/shoppingDetayGecis"
             app:destination="@id/shoppingDetayFragment2" />
@@ -40,7 +47,11 @@
         android:id="@+id/rommateAnasayfaFragment"
         android:name="com.serkanyilmaz.finaldemo.ui.fragment.RommateAnasayfaFragment"
         android:label="fragment_rommate_anasayfa"
-        tools:layout="@layout/fragment_rommate_anasayfa" />
+        tools:layout="@layout/fragment_rommate_anasayfa" >
+        <action
+            android:id="@+id/rommateDetayGecis"
+            app:destination="@id/rommateDetayFragment" />
+    </fragment>
     <fragment
         android:id="@+id/shoppingDetayFragment2"
         android:name="com.serkanyilmaz.finaldemo.ui.fragment.ShoppingDetayFragment"
@@ -58,5 +69,25 @@
         <argument
             android:name="Urun"
             app:argType="com.serkanyilmaz.finaldemo.data.entity.Urunler" />
+        <action
+            android:id="@+id/EkledenAnasayfayaGecis"
+            app:destination="@id/shoppingAnasayfaFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/rommateDetayFragment"
+        android:name="com.serkanyilmaz.finaldemo.ui.fragment.RommateDetayFragment"
+        android:label="RommateDetayFragment" >
+        <argument
+            android:name="arkadas"
+            app:argType="com.serkanyilmaz.finaldemo.data.entity.EvArkadaslari" />
+    </fragment>
+    <fragment
+        android:id="@+id/placesDetayGecis"
+        android:name="com.serkanyilmaz.finaldemo.ui.fragment.PlacesDetayFragment"
+        android:label="fragment_places_detay"
+        tools:layout="@layout/fragment_places_detay" >
+        <argument
+            android:name="yerler"
+            app:argType="com.serkanyilmaz.finaldemo.data.entity.Yerler" />
     </fragment>
 </navigation>

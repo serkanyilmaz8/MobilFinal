@@ -22,7 +22,7 @@
         android:id="@+id/imageViewUrunEkle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,14 +30,15 @@
         tools:src="@tools:sample/avatars" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewUrunEkle">
+        app:layout_constraintTop_toBottomOf="@id/buttonResimEkle">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextUrunEkleBaslik"
@@ -51,11 +52,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageViewUrunEkle">
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextUrunEkleAciklama"
@@ -94,5 +95,33 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+
+    <Button
+        android:id="@+id/buttonResimEkle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:text="Resim Yükle"
+        app:icon="@android:drawable/ic_menu_camera"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnFromGallery"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewUrunEkle" />
+
+    <Button
+        android:id="@+id/btnFromGallery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="48dp"
+        android:text="Galeriden Seç"
+        app:icon="@android:drawable/ic_menu_gallery"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonResimEkle"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewUrunEkle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

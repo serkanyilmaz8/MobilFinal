@@ -3,7 +3,7 @@ package com.serkanyilmaz.finaldemo.data.entity;
 import java.io.Serializable;
 
 public class Urunler implements Serializable {
-    private int id;
+    private String id;
     private String ad;
 
     private String aciklama;
@@ -13,12 +13,20 @@ public class Urunler implements Serializable {
     public Urunler() {
     }
 
-    public Urunler(int id, String ad, String aciklama, String resim, int fiyat) {
+    public Urunler(String id, String ad, String aciklama, String resim, int fiyat) {
         this.id = id;
         this.ad = ad;
         this.aciklama = aciklama;
         this.resim = resim;
         this.fiyat = fiyat;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getAd() {
