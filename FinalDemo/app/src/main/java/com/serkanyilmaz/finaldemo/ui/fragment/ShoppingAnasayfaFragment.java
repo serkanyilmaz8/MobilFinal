@@ -36,7 +36,9 @@ public class ShoppingAnasayfaFragment extends Fragment{
         urunlerCollection = firestore.collection("urunler");
         binding.toolbarShoppingAnasayfa.setTitle("Alışveriş");
         binding.shoppingAnasayfaRv.setLayoutManager(new LinearLayoutManager(requireContext()));
+        binding.progressBar.setVisibility(View.VISIBLE);
         urunlerCollection.get().addOnCompleteListener(value -> {
+            binding.progressBar.setVisibility(View.GONE);
             if (value.isSuccessful()) {
                 urunlerList.clear();
                 for (DocumentSnapshot d : value.getResult()) {
@@ -46,11 +48,6 @@ public class ShoppingAnasayfaFragment extends Fragment{
                         urunlerList.add(urun);
                     }
                 }
-          /*      Urunler newProduct = ShoppingAnasayfaFragmentArgs.fromBundle(getArguments()).getUrun();
-                if (newProduct != null) {
-                    // Add the new product to the list
-                    urunlerList.add(newProduct);
-                }*/
                 UrunlerAdapter urunlerAdapter = new UrunlerAdapter(requireContext(), urunlerList, urunlerCollection);
                 binding.shoppingAnasayfaRv.setAdapter(urunlerAdapter);
                 binding.floatingActionButton.setOnClickListener(view -> {

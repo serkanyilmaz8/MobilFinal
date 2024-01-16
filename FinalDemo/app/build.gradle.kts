@@ -51,4 +51,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     implementation("com.google.firebase:firebase-firestore:24.9.1")
     implementation("androidx.core:core-ktx:1.12.0")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation("com.google.firebase:firebase-auth")
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
 }

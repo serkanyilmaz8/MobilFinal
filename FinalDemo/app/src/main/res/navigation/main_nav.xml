@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/anasayfaFragment">
+    app:startDestination="@id/loginScreen">
     <fragment
         android:id="@+id/anasayfaFragment"
         android:name="com.serkanyilmaz.finaldemo.ui.fragment.AnasayfaFragment"
@@ -18,6 +18,9 @@
         <action
             android:id="@+id/anasayfaRommateAnasayfaGecis"
             app:destination="@id/rommateAnasayfaFragment" />
+        <action
+            android:id="@+id/action_anasayfaFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/placesAnasayfaFragment"
@@ -27,6 +30,9 @@
         <action
             android:id="@+id/action_placesAnasayfaFragment_to_placesDetayFragment"
             app:destination="@id/placesDetayGecis" />
+        <action
+            android:id="@+id/action_placesAnasayfaFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/shoppingAnasayfaFragment2"
@@ -42,6 +48,12 @@
         <action
             android:id="@+id/shoppingEkleGecis"
             app:destination="@id/shoppingEkleFragment2" />
+        <action
+            android:id="@+id/action_shoppingAnasayfaFragment2_to_anasayfaFragment"
+            app:destination="@id/anasayfaFragment" />
+        <action
+            android:id="@+id/action_shoppingAnasayfaFragment2_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/rommateAnasayfaFragment"
@@ -51,6 +63,9 @@
         <action
             android:id="@+id/rommateDetayGecis"
             app:destination="@id/rommateDetayFragment" />
+        <action
+            android:id="@+id/action_rommateAnasayfaFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/shoppingDetayFragment2"
@@ -60,6 +75,9 @@
         <argument
             android:name="Urun"
             app:argType="com.serkanyilmaz.finaldemo.data.entity.Urunler" />
+        <action
+            android:id="@+id/action_shoppingDetayFragment2_to_anasayfaFragment"
+            app:destination="@id/anasayfaFragment" />
     </fragment>
     <fragment
         android:id="@+id/shoppingEkleFragment2"
@@ -89,5 +107,35 @@
         <argument
             android:name="yerler"
             app:argType="com.serkanyilmaz.finaldemo.data.entity.Yerler" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.serkanyilmaz.finaldemo.ui.fragment.LoginScreen"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreen_to_anasayfaFragment"
+            app:destination="@id/anasayfaFragment" />
+        <action
+            android:id="@+id/action_loginScreen_to_registerScreen"
+            app:destination="@id/registerScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerScreen"
+        android:name="com.serkanyilmaz.finaldemo.ui.fragment.RegisterScreen"
+        android:label="fragment_register_screen"
+        tools:layout="@layout/fragment_register_screen" >
+        <action
+            android:id="@+id/action_registerScreen_to_loginScreen"
+            app:destination="@id/loginScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.serkanyilmaz.finaldemo.ui.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_anasayfaFragment"
+            app:destination="@id/anasayfaFragment" />
     </fragment>
 </navigation>

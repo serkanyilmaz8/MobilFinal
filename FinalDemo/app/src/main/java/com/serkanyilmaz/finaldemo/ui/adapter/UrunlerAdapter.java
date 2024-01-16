@@ -85,7 +85,6 @@ public class UrunlerAdapter extends RecyclerView.Adapter<UrunlerAdapter.shopping
             ShoppingAnasayfaFragmentDirections.ShoppingDetayGecis gecis =
                     ShoppingAnasayfaFragmentDirections.shoppingDetayGecis(urun);
             Navigation.findNavController(view).navigate(gecis);
-            urunlerCollection.add(urun);
         });
 
     }

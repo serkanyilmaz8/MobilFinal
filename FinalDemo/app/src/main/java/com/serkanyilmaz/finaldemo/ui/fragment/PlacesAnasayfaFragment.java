@@ -33,20 +33,17 @@ public class PlacesAnasayfaFragment extends Fragment {
 
         ArrayList<Yerler> yerlerListesi = new ArrayList<>();
         Yerler yer1 = new Yerler(1, "CİCİ DÖNER", "Döner ve kebap salonu", "restoren_img" );
-        Yerler yer2 = new Yerler(2, "CİCİ DÖNER", "Döner ve kebap salonu", "restoren_img" );
-        Yerler yer3 = new Yerler(3, "CİCİ DÖNER", "Döner ve kebap salonu", "restoren_img" );
-        Yerler yer4 = new Yerler(4, "CİCİ DÖNER", "Döner ve kebap salonu", "restoren_img" );
-        Yerler yer5 = new Yerler(5, "CİCİ DÖNER", "Döner ve kebap salonu", "restoren_img" );
-        Yerler yer6 = new Yerler(6, "CİCİ DÖNER", "Döner ve kebap salonu", "restoren_img" );
-        Yerler yer7 = new Yerler(7, "CİCİ DÖNER", "Döner ve kebap salonu", "restoren_img" );
+        Yerler yer2 = new Yerler(2, "İBİŞ MARKET", "Alışveriş ve toptancı", "market_img" );
+        Yerler yer3 = new Yerler(3, "KATIK DÖNER", "Döner ve kebap salonu", "restoren_img" );
+        Yerler yer4 = new Yerler(4, "KUKLA PUB", "Alkol ve eğlence mekanı", "pub_img" );
+        Yerler yer5 = new Yerler(5, "HOT DÖNER", "Döner ve kebap salonu", "restoren_img" );
+
 
         yerlerListesi.add(yer1);
         yerlerListesi.add(yer2);
         yerlerListesi.add(yer3);
         yerlerListesi.add(yer4);
         yerlerListesi.add(yer5);
-        yerlerListesi.add(yer6);
-        yerlerListesi.add(yer7);
 
         PlacesAdapter placesAdapter = new PlacesAdapter(
                 requireContext(), yerlerListesi);

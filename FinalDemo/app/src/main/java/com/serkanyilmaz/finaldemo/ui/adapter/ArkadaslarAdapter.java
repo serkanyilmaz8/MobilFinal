@@ -10,8 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.serkanyilmaz.finaldemo.data.entity.EvArkadaslari;
 import com.serkanyilmaz.finaldemo.databinding.RoommateCardTasarimBinding;
-import com.serkanyilmaz.finaldemo.databinding.ShoppingCardTasarimBinding;
-import com.serkanyilmaz.finaldemo.ui.fragment.RommateAnasayfaFragment;
 import com.serkanyilmaz.finaldemo.ui.fragment.RommateAnasayfaFragmentDirections;
 
 import java.util.List;

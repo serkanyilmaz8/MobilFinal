@@ -1,5 +1,7 @@
 package com.serkanyilmaz.finaldemo.ui.fragment;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -29,12 +31,17 @@ public class ShoppingDetayFragment extends Fragment {
         Urunler urun = bundle.getUrun();
 
         binding.toolbarShoppingDetay.setTitle(urun.getAd());
+        String imagePath = urun.getResim();
+        if (imagePath.endsWith("jpg")) {
+            // Load and set the image from the file path
+            Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
+            binding.imageViewUrunDetay.setImageBitmap(bitmap);
+        } else {
+            // Load and set the image from the drawable resources
+            int resID = getContext().getResources().getIdentifier(imagePath, "drawable", getContext().getPackageName());
+            binding.imageViewUrunDetay.setImageResource(resID);
 
-        binding.imageViewUrunDetay.setImageResource(
-                getResources()
-                        .getIdentifier(urun.getResim(), "drawable",
-                                requireContext().getPackageName())
-        );
+        }
 
         binding.textViewUrunDetayBaslik.setText(urun.getAd());
         binding.textViewUtunDetayAciklama.setText((urun.getAciklama()));
